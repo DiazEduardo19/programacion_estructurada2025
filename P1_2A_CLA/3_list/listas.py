@@ -1,87 +1,100 @@
 import os
+
 #Ejemplo 1 Crear una lista de numeros e imprimir el contenido
 os.system("clear")
 
-numeros=[23,45,8,24]
+numeros=[23,34]
 
-#1er forma
 print(numeros)
 
-#2da forma valor
-
+lista="["
 for i in numeros:
-    print(i)
+  lista+=f"{i},"
+print(f"{lista}]")
 
-#3er forma indices
-
+lista="["
 for i in range(0,len(numeros)):
-    print(numeros[i])  
-    
+  lista+=f"{numeros[i]},"
+print(f"{lista}]")
 
+lista="["
+i=0
+while i<len(numeros):
+  lista+=f"{numeros[i]},"
+  i+=1
+print(f"{lista}]")
 
 
 #Ejemplo 2 Crear una lista de palabras y posteriormente buscar la coincidencia de una palabra 
 
-os.system("clear")
-
-# palabras=["hola","casa","jupiter","sol"]
+# os.system("clear")
+# palabras=["hola","2023","Lebroncito","UTD","True","UTD"]
+# print(palabras)
 # palabra_buscar=input("Dame la palabra a buscar: ")
 
-# #1er forma
+# #1ER FORMA
 # if palabra_buscar in palabras:
-#     print("Se encontro la palabra")
+#   print("SI se encontro la palabra en la lista")
 # else:
-#     print("No encontro la palabra")     
+#   print("NO se encontro la palabra en la lista")  
 
-# #2da forma
+
+#2DA FORMA
+#=["hola","2023","Lebroncito","UTD","True","UTD"]
 # encontro=False
 # for i in palabras:
-#    if i==palabra_buscar:
-#        encontro=True
-
+#   if i==palabra_buscar:
+#     encontro=True 
 # if encontro:
-#     print("Se encontro la palabra")
+#   print("SI se encontro la palabra en la lista")
 # else:
-#     print("No encontro la palabra")     
+#     print("NO se encontro la palabra en la lista")   
 
-# #3er forma
+#3er FORMA
+#=["hola","2023","Lebroncito","UTD","True","UTD"]
 # encontro=False
-# for i in range(0,len(numeros)):
-#    if palabras[i]==palabra_buscar:
-#        encontro=True
-
+# for i in range(0,len(palabras)):
+#   if palabras[i]==palabra_buscar:
+#     encontro=True 
+    
 # if encontro:
-#     print("Se encontro la palabra")
+#   print("SI se encontro la palabra en la lista")
 # else:
-#     print("No encontro la palabra")     
-
-
-
-
-
-
-
-
-
-
-
+#     print("NO se encontro la palabra en la lista")  
 
 #Ejemplo 3 Añadir elementos a la lista
+os.system("clear")
+# numeros=[]
 
-numeros=[]
-opc="si"
-while opc=="si":
-    numeros.append(float(input("Dame un numero entero o decimal: ")))
-    opc=input("¿Deseas solicitar otro numero (si/no)").lower()
-
-print(numeros)
+# opc="si"
+# while opc=="si":
+#    numeros.append(float(input("Dame un numero entero o decimal: ")))
+#    opc=input("¿Desear agregar otro numero a las lista (si/no)? ").lower()
+# print(numeros)   
 
 
 
-#Ejemplo 4 Crear una lista multidimensional (matriz) que almacene el nombre y telefono de 4 personas
+
+#Ejemplo 4 Crear una lista multidimensional que permita almacenar el nombre y telefono de una agenda
 
 agenda=[
         ["Carlos","6181234567"],
         ["Alberto","6671234567"],
         ["Martin","6785678923"]
        ]
+
+print(agenda)
+
+for i in agenda:
+    print(i)
+
+for r in range(0,3):
+    for c in range(0,2):
+        print(agenda[r][c])    
+
+cadena=""
+for r in range(0,3):
+    for c in range(0,2):
+      cadena+=f"{agenda[r][c]}, "
+    cadena+="\n"     
+print(cadena) 
